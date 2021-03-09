@@ -47,3 +47,12 @@ def main():
     title()
 
 main()
+while True:
+    print("\n")
+    a=input("continue? yes or no: ")
+    print("\n")
+    if a == "yes":
+        main()
+    else:
+        print("end")
+        break
