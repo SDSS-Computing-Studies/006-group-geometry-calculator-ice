@@ -24,17 +24,44 @@ def instructions():
     # Modified: Sepehr Zolfghari
     print("start")
 
-    
-    
-    
+    print("instructions: ")
+    print("This program will be asking you to enter a shape that you would want to calculate its volume")
+    print("Then you need to enter that right measuremnets that you will use")
+    print("The volume would be the answer")
+    print("/n")
+    print("Enter yes to remake the program")
+    print("Enter no to close the program")
+    print("/n")
+    print("Shapes accessible: ")
+    print("/n")
+    print("sphere, cylinder, cone, cube, cuboid, pyramid, triangular prism")
+    print("/n")
+    return None
 
-def square 
+def getShape():
+    # input: none needed
+    # output: string shape
+    # author
+    shape=input("enter a shape: ")
+    return shape
+
+
+ 
+
+    
+    
+ 
    
 def main():
     # main block of code that will run your program and control program flow
     # You will need to include a while loop to keep repeating the commands until
     # the user chooses to exit
-    title()
+    
+    shape=getShape()
+    # get list of questions
+    questions=getParams(shape)
+    
+    
 
 main()
 while True:
