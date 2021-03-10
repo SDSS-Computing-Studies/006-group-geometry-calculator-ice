@@ -46,9 +46,6 @@ def getShape():
     shape=input("enter a shape: ")
     return shape
 
-    
-
-    
 
 
  
