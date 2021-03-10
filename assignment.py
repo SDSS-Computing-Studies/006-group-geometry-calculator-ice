@@ -14,7 +14,8 @@ def title():
     print("author: Sepehr Zolfaghari")
     print("modified by Sepehr Zolfaghari")
     print("/n")
-    return none
+    return None
+
 
 def instructions():
     # Will display instructions
@@ -45,6 +46,10 @@ def getShape():
     shape=input("enter a shape: ")
     return shape
 
+    
+
+    
+
 
  
 
@@ -57,9 +62,6 @@ def main():
     # You will need to include a while loop to keep repeating the commands until
     # the user chooses to exit
     
-    shape=getShape()
-    # get list of questions
-    questions=getParams(shape)
     
     
 
