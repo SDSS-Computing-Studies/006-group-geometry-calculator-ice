@@ -62,11 +62,9 @@ def getParams(shape):
     #baselength=input("enter the height of the base of a surface of a triangle (calulate the area of the): ")
     #baselength=input("enter the length of one side of a surface of a triangle: ")
 
-    call forth=["enter the radius: ","enter the height:","enter the width: ","enter the length: ","enter the height of the base of the surface of the triangle: ","enter the length of one side of the surcace of the triangle: "]
-    r,h,w,l,baseheight,baselength,=call forth
-    if shape=="sphere":
-        question=[r]
-        
+     ["enter the radius: ","enter the height:","enter the width: ","enter the length: ","enter the height of the base of the surface of the triangle: ","enter the length of one side of the surcace of the triangle: "]
+    
+
 
 
 
@@ -81,8 +79,14 @@ def main():
     # You will need to include a while loop to keep repeating the commands until
     # the user chooses to exit
     
-    
-    
+    triangle=getShape()
+    # get list of questions
+    questions=getparams(shape)
+    # get list of measurements 
+    measuremnets=getInputs(questions)
+    print("value is "+str(calculate(measuremnets,shape))) # calculate the volume 
+
+
 
  main()
 while True:
