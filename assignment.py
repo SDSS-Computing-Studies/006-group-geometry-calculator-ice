@@ -3,6 +3,7 @@
 # Feel free to rename your variables
 
 import math
+from typing import List
 
 def title():
     # Will display a title screen
@@ -62,11 +63,64 @@ def getParams(shape):
     #baselength=input("enter the height of the base of a surface of a triangle (calulate the area of the): ")
     #baselength=input("enter the length of one side of a surface of a triangle: ")
 
-     ["enter the radius: ","enter the height:","enter the width: ","enter the length: ","enter the height of the base of the surface of the triangle: ","enter the length of one side of the surcace of the triangle: "]
+     prompts=["enter the radius: ","enter the height:","enter the width: ","enter the length: ","enter the height of the base of the surface of the triangle: ","enter the length of one side of the surcace of the triangle: "]
     
+    r,h,w,l,baseheight,baselength,=prompts
+    if shape=="sphere":
+        question=[r]
+        return question
+    elif shape=="cylinder":
+        question=[r,h]
+        return question
+    elif shape=="cone":
+        question=[r,h]
+        return question
+    elif shape=="cube":
+        question=[w]
+        return question
+    elif shape=="cuboid":
+        question=[h,w,l]
+        return question
+    elif shape=="pyramid":
+        question=[h,w,l]
+        return question
+    elif shape=="triangular prism":
+        question=[baseheight,baselength,h]
+        return question
+    else:
+        question=[0]
+        return question
 
 
+def getInputs(question):
+    # Will prompt the user for inputs for the shape they.
+    # These will be asked so that the user can enter in appropriate values
+    # It will turn all the input data into a list
+    # input parameter: list containing the prompts/questions
+    # output parameter: return a list containing all the measurements of the shape
 
+    a=0
+    List=[]
+    for i in question:
+        if question[a]==0:
+            break
+        else:
+            c=input(question[a])
+            c=float(c)
+            List.append(c)
+            a+=1
+        return List
+
+        def Calculate(measuremnets,shhere):
+
+            if shape=="sphere":
+                v=(4*math.pi*(measuremnets[0]**3))/3
+                return vars
+            elif shape=="cylinder":
+                v=math.pi*(measurements[0]**2)*measurements[1]
+                return vars
+            elif shape=="cube":
+                v=
 
  
 
