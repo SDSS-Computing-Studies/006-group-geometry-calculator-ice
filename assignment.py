@@ -3,7 +3,7 @@
 # Feel free to rename your variables
 
 import math
-from typing import List
+from typing import List, NoReturn
 
 def title():
     # Will display a title screen
@@ -66,25 +66,25 @@ def getParams(shape):
      prompts=["enter the radius: ","enter the height:","enter the width: ","enter the length: ","enter the height of the base of the surface of the triangle: ","enter the length of one side of the surcace of the triangle: "]
     
     r,h,w,l,baseheight,baselength,=prompts
-    if shape=="sphere":
+    if getShape=="sphere":
         question=[r]
         return question
-    elif shape=="cylinder":
+    elif getShape=="cylinder":
         question=[r,h]
         return question
-    elif shape=="cone":
+    elif getShape=="cone":
         question=[r,h]
         return question
-    elif shape=="cube":
+    elif getShape=="cube":
         question=[w]
         return question
-    elif shape=="cuboid":
+    elif getShape=="cuboid":
         question=[h,w,l]
         return question
-    elif shape=="pyramid":
+    elif getShape=="pyramid":
         question=[h,w,l]
         return question
-    elif shape=="triangular prism":
+    elif getShape=="triangular prism":
         question=[baseheight,baselength,h]
         return question
     else:
@@ -114,20 +114,34 @@ def getInputs(question):
         def Calculate(measuremnets,shhere):
 
             if shape=="sphere":
-                v=(4*math.pi*(measuremnets[0]**3))/3
-                return vars
-            elif shape=="cylinder":
-                v=math.pi*(measurements[0]**2)*measurements[1]
-                return vars
-            elif shape=="cube":
-                v=
+        v=(4*math.pi*(measurements[0]**3))/3
+        return vars
+    elif shape=="cylinder":
+        v=math.pi*(measurements[0]**2)*measurements[1]
+        return vars
+    elif shape=="cone":
+        v=(math.pi*(measurements[0]**2)*measurements[1])/3
+        return vars
+    elif shape=="cube":
+        v=measurements[0]**3
+        return vars
+    elif shape=="cuboid":
+        v=measurements[0]*measurements[1]*measurements[2]
+        return vars
+    elif shape=="pyramid":
+        v=(measurements[0]*measurements[1]*measurements[2])/3
+        return vars
+    elif shape=="triangular prism"   :
+        v=0.5*measurements[0]*measurements[1]*measurements[2]
+        return vars
+    else:
+        v="not availble"
+        return vars
 
- 
+        title()
+        instructions()
 
-    
-    
- 
-   
+
 def main():
     # main block of code that will run your program and control program flow
     # You will need to include a while loop to keep repeating the commands until
